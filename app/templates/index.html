@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Productos</title>
+</head>
+<body class="container py-4">
+  <h1 class="mb-4">Productos</h1>
+  <form id="product-form" class="mb-4">
+    <div class="mb-3">
+      <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+    </div>
+    <div class="mb-3">
+      <input type="number" step="0.01" class="form-control" id="price" placeholder="Precio" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody id="product-table">
+      {% for p in products %}
+      <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <script>
+    document.getElementById('product-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const price = document.getElementById('price').value;
+      const resp = await fetch('/api/products', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, price })
+      });
+      if (resp.ok) {
+        location.reload();
+      }
+    });
+  </script>
+</body>
+</html>
