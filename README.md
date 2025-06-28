@@ -1,14 +1,14 @@
 # AppArqCapa
 
-Aplicaci\u00f3n de ejemplo con arquitectura por capas (presentaci\u00f3n, negocios y datos) desarrollada en Python con Flask.
+
+Aplicacion de ejemplo con arquitectura por capas (presentacion, negocios y datos) desarrollada en Python con Flask.
 
 ## Estructura
 - **app/data**: modelos y acceso a datos.
-- **app/business**: l\u00f3gica de negocio.
+- **app/business**: logica de negocio.
 - **app/presentation**: rutas y plantillas.
 
-## Ejecuci\u00f3n
-
+## Ejecucion
 1. Crear un entorno virtual y activar.
 2. Instalar dependencias:
    ```bash

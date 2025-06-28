@@ -31,7 +31,7 @@ def delete_product(product_id):
     db.session.commit()
     return product
 
-
 def get_products_above_price(min_price):
     """Return products with price greater or equal to the given value."""
     return Product.query.filter(Product.price >= min_price).all()
+
