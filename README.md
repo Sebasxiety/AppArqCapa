@@ -1,5 +1,6 @@
 # AppArqCapa
 
+
 Aplicacion de ejemplo con arquitectura por capas (presentacion, negocios y datos) desarrollada en Python con Flask.
 
 ## Estructura
@@ -8,14 +9,17 @@ Aplicacion de ejemplo con arquitectura por capas (presentacion, negocios y datos
 - **app/presentation**: rutas y plantillas.
 
 ## Ejecucion
-
 1. Crear un entorno virtual y activar.
 2. Instalar dependencias:
    ```bash
-   pip install flask flask_sqlalchemy
+   pip install flask flask_sqlalchemy pymysql
    ```
-3. Iniciar la aplicacion:
+3. Configurar la cadena de conexi\u00f3n a MySQL mediante la variable `DATABASE_URL` (opcional). Ejemplo:
+   ```bash
+   export DATABASE_URL='mysql+pymysql://usuario:clave@localhost/products_db'
+   ```
+4. Iniciar la aplicaci\u00f3n:
    ```bash
    python run.py
    ```
-4. Abrir `http://localhost:5000` en el navegador.
+5. Abrir `http://localhost:5000` en el navegador.
