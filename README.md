@@ -28,3 +28,6 @@ Aplicacion de ejemplo con arquitectura por capas (presentacion, negocios y datos
    python run.py
    ```
 6. Abrir `http://localhost:5000` en el navegador.
+
+7. Resultados en imagenes
+![image](https://github.com/user-attachments/assets/5fd9b9da-7789-43f8-9df2-0fc1befe4438)
