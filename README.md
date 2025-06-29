@@ -15,13 +15,16 @@ Aplicacion de ejemplo con arquitectura por capas (presentacion, negocios y datos
    pip install flask flask_sqlalchemy pymysql
    pip install cryptography
    ```
-3. Configurar la cadena de conexion a MySQL mediante la variable `DATABASE_URL`. Ejemplo:
+3. Configurar la cadena de conexion a MySQL mediante la variable `DATABASE_URL`.
    Antes de eso ejecutar el script create_bd.py
+   ```bash
+   python create_bd.py
+   ```
    ```bash
    export DATABASE_URL='mysql+pymysql://usuario:clave@localhost/products_db'
    ```
-4. Iniciar la aplicacion:
+5. Iniciar la aplicacion:
    ```bash
    python run.py
    ```
-5. Abrir `http://localhost:5000` en el navegador.
+6. Abrir `http://localhost:5000` en el navegador.
