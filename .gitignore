@@ -1,0 +1,23 @@
+# Ignore virtual environments
+venv/
+ENV/
+env/
+.venv/
+ 
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore dotenv files (si usas)
+.env
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore macOS junk
+.DS_Store

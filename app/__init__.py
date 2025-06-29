@@ -7,7 +7,7 @@ import os
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv(
-        'DATABASE_URL', 'mysql+pymysql://user:password@localhost/products_db'
+        'DATABASE_URL', 'mysql+pymysql://root:123456@localhost/products_db'
     )
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
